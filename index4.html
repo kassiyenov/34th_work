@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="cart-items">
+    <div class="item">Молоко 1 л<span class="qty"> x 2</span></div>
+    <div class="item">Кола 1.5 л<span class="qty"> x 1</span></div>
+    <div class="item">Хлеб 1 булка<span class="qty"> x 2</span></div>
+    <div class="item">Сыр 250 г<span class="qty"> x 1</span></div>
+    <div class="item">Шоколад<span class="qty"> x 3</span></div>
+  </div>
+
+<!--  <script src="js/jquery-3.3.1.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var cartItems = $("#cart-items");
+    var item = $(".item");
+    $(item[1]).remove();
+
+    var newQty = $("<span>").text(" x 4").addClass("qty");
+    
+    var newItem = $("<div>")
+    newItem.text("Рыбные консервы").addClass("item");
+    newItem.append(newQty);
+
+    $(item[4]).replaceWith($(newItem));
+  </script>
+</body>
+</html>

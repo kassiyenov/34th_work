@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  Дела
+  <ul id="todo"></ul>
+
+<!--  <script src="js/jquery-3.3.1.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var todo = $("#todo");
+
+    while(true) {
+      var input = prompt("Введите дело");
+      if(input !== null && input !== ""){
+      var newTask = $("<li>").text(input);
+      todo.append(newTask);
+      } else {
+        break;
+      }
+    } 
+
+  </script>
+</body>
+</html>

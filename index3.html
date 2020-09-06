@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="todo-list"></ol>
+<!--  <script src="js/jquery-3.3.1.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var tasks = ['Купить лемонад', 'Поджарить тосты', 'Починить автомобиль', 'Сходить в кино', 'Покормить кота'];
+
+    var todo = $("#todo-list");
+
+    for (var i in tasks) {
+      var newTask = $("<li>");
+      var text = tasks[i];
+      newTask.append(text);
+      todo.append(newTask);
+    }
+  </script>
+</body>
+</html>

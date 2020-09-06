@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container"></div>
+<!--  <script src="js/jquery-3.3.1.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    for (j = 0; j < 4; j++) {
+      for (i = 0; i < 8; i++) {
+        var container = $("#container");
+        var blackCell = $("<span>");
+        var whiteCell = $("<span>");
+        var sizes = function(conLength, cellLength) {
+          container.css({
+            maxWidth: conLength,
+            maxHeight: conLength
+          });
+          blackCell.css({
+            width: cellLength,
+            height: cellLength,
+            background: "black",
+            display: "inline-block"
+          });
+          whiteCell.css({
+            width: cellLength,
+            height: cellLength,
+            background: "yellow",
+            display: "inline-block"
+          });
+        };
+        sizes("400px", "50px");
+        if (i % 2) {
+          container.append(blackCell);
+        } else {
+          container.append(whiteCell);
+        }
+      }
+      for (i = 0; i < 8; i++) {
+        var container = $("#container");
+        var blackCell = $("<span>");
+        var whiteCell = $("<span>");
+        var sizes = function(conLength, cellLength) {
+          container.css({
+            maxWidth: conLength,
+            maxHeight: conLength
+          });
+          blackCell.css({
+            width: cellLength,
+            height: cellLength,
+            background: "black",
+            display: "inline-block"
+          });
+          whiteCell.css({
+            width: cellLength,
+            height: cellLength,
+            background: "yellow",
+            display: "inline-block"
+          });
+        };
+        sizes("400px", "50px");
+        if (i % 2) {
+          container.append(whiteCell);
+        } else {
+          container.append(blackCell);
+        }
+      }
+    }
+
+
+  </script>
+</body>
+</html>
